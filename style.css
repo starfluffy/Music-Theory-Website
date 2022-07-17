@@ -1,0 +1,482 @@
+* {box-sizing: border-box;}
+
+#logo img{ /* for the logo and header picture*/
+	display: inline-block;
+  width: 350px; /*in pixels so that the picture doesn't change size even if the screen size changes*/
+}
+
+body {
+	margin-left: 2%;/*makes it so that the content on the page doesn't touch the sides*/
+	margin-right: 2%;
+	font-family: Arial; /*makes everything have the same font*/
+}
+
+#navbar { /*css for the navigation bar*/
+  overflow: hidden; /*content that overflows the box will be hidden*/
+  background-color: #000000; /*background colour black*/
+  z-index: 950; /*makes it so that the navigation bar is brought the front above everything else*/
+}
+
+#navbar a { /*css for the links/objects in the navigation bar*/
+  float: left;/*makes the link's box floats to the left most that it can of the navigation bar*/
+  display: block;
+  color: #FFFFFF; /*colour of text is white*/
+  text-align: center; /*makes the text sit in the center of it's box*/
+  padding: 14px 16px;
+  text-decoration: none; /*makes the text just plain text*/
+  font-size: 17px;
+}
+
+#navbar a:hover { /*css for when user hovers over the objects in the navigation bar*/
+  background-color: #B8B8B9;/*background colour light gray*/
+  color: #000000;/*text colour black*/
+}
+
+#navbar a.active { /*css for the object in the navigation bar when use is on that page*/
+  background-color: #22316C;/*background colour dark blue*/
+  color: #FFFFFF;/*text colour white*/
+}
+
+.content { /*css for the main part of the page that contatins the info.,quiz,etc.*/
+  width: 98%;
+  margin: auto;
+}
+
+.sticky { /*css for the class "sticky" that gets added to the navigaiotn bar when the navigation bar touches the top on scroll*/
+  position: fixed;/*stops the navigation bar from moving*/
+  top: 0; /*no padding at the top*/
+  width: 96%;/*keeps the width of the navigation bar the same when sticky*/
+}
+
+.sticky + .content,
+.stickycontent { /*css for the content of the page when the navigation bar is sticky*/
+  padding-top: 48px; /*padding is the same as the height of the navigation bar. this means the navigation bar won't cut off anything*/
+  
+}
+
+#navbar .search-container { /*css for search bar in navigation bar*/
+  float: right;
+}
+
+#navbar input[type=text] {/*css for the place where you type in the search bar in the navigation bar*/
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+#navbar .search-container button { /*css for the search icon button that is pressed*/
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #B8B8B9; /*background colour is light gray*/
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+#navbar .search-container button:hover { /*css for the search icon button when user hovers over it*/
+  background: #22316C;/*background colour dark blue*/
+  color: #B8B8B9; /*colour is image is light gray*/
+}
+
+#burger { /*css for whole burger navigation bar that appears when screen size is smaller than 600px*/
+	display:none; /*initially hidden when screen size is bigger than 600px*/
+	color: #fff; /*text colour white*/
+	text-align: left;
+  position: fixed; /*means it won't move*/
+  top: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+  overflow: hidden;
+  background-color: #000000;
+  text-decoration: none;
+  margin: 0 !important;
+  width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  z-index: 900;
+  float: left;
+}
+
+#burger a { /*for the objects of the burger navigation bar. essecientially the same as the normal navigation bar, except vertical*/
+  float: none; 
+  text-align: left;
+  display: block;
+  color: #FFFFFF;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 0;
+  border: 0;
+}
+
+#burgernav .search-container {
+    float: none;
+  }
+
+#burgernav .search-container button { /*same as the search bar for the normal navigation bar except it sits under all the other objects*/
+  float: none;
+  padding: 14px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #B8B8B9;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width:100%;
+  text-align: left;
+  display: block;
+  margin: 0;
+}
+
+#burgernav input[type=text] {/*css for the search bar in the burger nav bar*/
+  float: none;
+  padding: 14px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #FFFFFF;
+  font-size: 17px;
+  border: none;
+  width:100%;
+  text-align: left;
+  display: block;
+  margin: 0;
+}
+
+#burgernav .search-container button:hover {/*css for the search bar in the burger nav bar*/
+  background: #22316C;
+  color: #B8B8B9;
+}
+
+#burger a:hover {
+  background-color: #B8B8B9 !important;
+  color: #000000 !important;
+}
+
+#burger a.active {
+  background-color: #22316C;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#burger a.burgericon { /*css for the burger icon that is clicked for the menu to open*/
+  background: #000000;
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 14px; /*makes it the same height as the nav bar*/
+  padding-right:19px;
+  padding-left:19px;
+}
+
+ .burgerhidden { /*css for a class that gets added and removed*/
+	display:none !important;  /*makes the object disppear*/
+}
+
+@media screen and (max-width: 600px) { /*css for when the screen size is smaller than 600px*/
+  #navbar .search-container {
+    float: none;
+  }
+  #navbar a, #navbar input[type=text], #navbar .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  #navbar input[type=text] {
+    border: 1px solid #ccc;  
+  }
+
+ #burger { /*burger nav only appears when the screen is small*/
+ 	display:block;
+ }
+
+ body {/*main body of the site*/
+   width: 100%;
+   margin: 0;
+ }
+
+ .content {/*main part of the page, excluding everything in the header*/
+    width: 96%;
+    margin: auto;
+ }
+
+}
+
+#topButton { /*css for button that takes the user back to the top of the page when clicked*/
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 101;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #22316C; /*background colour dark blue*/
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#topButton:hover {
+  background-color: #B8B8B9; /*background colour light gray*/
+}
+
+footer{ /*css for the footer*/
+background-color: #000000; /*background colour black*/
+color: #FFFFFF; 
+padding: 50px; 
+text-align: center; /*centers all the objects in the footer*/
+}
+
+.fa:hover { /*css for the objects in the footer*/
+  opacity: 0.7; 
+}
+
+.fa-facebook { /*css for the facebook icon*/
+  background: #3B5998;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 55px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+.fa-google { /*css for the google icon*/
+  background: #dd4b39;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 55px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+.fa-linkedin { /*css for the linkedin icon*/
+  background: #007bb5;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 55px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 10px;
+}
+
+.fa-twitter { /*css for the twitter icon*/
+  background: #55ACEE;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 55px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+#buttons{/*css for the buttons in the footer*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#image-gallery { /*css for the image gallery on the home page*/
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  z-index: 100;
+  max-height: 325px;
+  padding: 0px;
+}
+
+/* The dots/bullets/indicators for the image gallery*/
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+#dots { /*css for the dots of the image gallery slideshow*/
+  margin-top: 0px;
+  display: block;
+}
+
+.active { /*css for the dots of the image gallery slideshow for the corresponding dot to the current image*/
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {/*css for the image gallery slideshow*/
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {/*css for the image gallery slideshow*/
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.mySlides {/*css for the image gallery slideshow*/
+  width: 100%;
+  max-height: 325px;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+#quiz { /*css for the quiz*/
+  margin-left: 1%;
+  width: 96%;
+}
+
+#quiz img { /*css for the images used in the quiz*/
+  max-width:300px;
+}
+.submitbutton { /*css for the quiz submit button*/
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 0px;
+}
+
+.submitbutton:hover { /*css for what happens when a user hovers over the submit button*/
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+}
+
+.resetbutton { /*css for the quiz's reset button*/
+  background: gray;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	margin-top: 0px;
+}
+
+.resetbutton:hover { /*css for when the user hovers over the reset button*/
+	background: white;
+	border: 1px solid gray;
+	color: black;
+	cursor: pointer;
+}
+
+#tryagainbutton { /*css for the quiz's try again button*/
+  background: blue;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	margin-top: 0px;
+}
+
+#tryagainbutton:hover {/*css for when the user hovers over the try again hover*/
+	background: white;
+	border: 1px solid blue;
+	color: black;
+	cursor: pointer;
+}
+
+#after_submit1 { /*css for the message that appears when quiz 1 is submitted*/
+	padding: 10px 20px 10px 20px;
+	width: 300px;
+	margin-left: 1%;
+	font-size: 30px;
+}
+
+#after_submit2 { /*css for the message that appears when quiz 1 is submitted*/
+	padding: 10px 20px 10px 20px;
+	width: 300px;
+	margin-left: 1%;
+	font-size: 30px;
+}
+
+#radio-button {
+	display: inline;
+} 
+
+table, th, td { /*css for the table and the table headers and data*/
+  border:1px solid black;
+  border-collapse: collapse;
+}
+
+th, td { /*css for the table headings and data*/
+  padding: 3px;
+}
+
+th { /*css for the table headings*/
+  font-size: 20px;
+}
+
+table {/*css for the table*/
+  margin: auto;
+}
+
+td {/*css for table data*/
+  padding-left: 10px;
+}
+
+h2 {
+  margin-left: 1%;
+}
+
+#signup { /*css for the sign up form*/
+  width: 98%;
+  margin-left: 1%;
+}
+
+#writing {/*css for the paragraphs on the site*/
+  width: 79%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#abrsm_logo {/*css for the abrsm logo used on the home page*/
+  margin: 30px;
+  margin-top: 25px;
+}
+
+#resources { /*css for the div that has the images used on the revise page*/
+  margin:auto;
+  text-align: center;
+}
+
+#resources img { /*css for the images used on the revise page*/
+  height:300px;
+  padding:6px;
+  max-height: 280px;
+}
+
+#resources img:hover { /*css for what happens when the user hovers over the images on the revise page*/
+  opacity: 65%;
+  padding:0px;
+}

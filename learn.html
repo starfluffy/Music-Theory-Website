@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Learn</title>
+	<link rel="stylesheet" type="text/css" href="style.css">	<!--linking to the css style sheet-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- code that is related to detecting to the size of the website-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- code that allows the website to use specific icon images-->
+  <link rel="icon" href="logo.png" type="image/gif" sizes="16x16"><!-- code for the tab bar icon-->
+</head>
+
+<body>
+	<div id="container"><!-- code for everything at the top of the site that appears on every page-->
+		<div id="banner">
+      <a id="logo" href = "index.html"><img src="header.png" alt="a picture of the logo and header"></a> <!-- code for logo and header text. both are in one image-->
+    </div>
+		<div id = "navbar"> <!-- navigation bar -->
+			<a class="nav" href="index.html">HOME</a>
+			<a class="active" href="learn.html">LEARN</a> <!-- has the class "active" becuase the user is on that page -->
+			<a class="nav" href="quiz.html">QUIZ</a>
+			<a class="nav" href="revise.html">REVISE</a>
+			<a class="nav" href="signup.html">SIGN UP</a>
+			<div class="search-container"> <!-- code for the search bar-->
+				<form action="https://www.google.com/search" method="get" target="_blank"> <!-- the search bar links to google-->
+				  <input type="text" placeholder="Search.." name="q" id="q" required> <!-- makes the search input appear in google -->
+				  <button type="submit"><i class="fa fa-search"></i></button> <!-- code for the search icon -->
+				</form>
+			</div>
+		</div>
+    <div id="burger" class="burgerhidden"> <!-- burger navigation bar-->
+      <a class="active" href="learn.html">LEARN</a> <!-- has the class "active" becuase the user is on that page -->
+      <div id="burgernav" class="burgerhidden">
+        <a class="nav" href="index.html">HOME</a>
+        <a class="nav" href="quiz.html">QUIZ</a>
+        <a class="nav" href="revise.html">REVISE</a>
+        <a class="nav" href="signup.html">SIGN UP</a>
+        <div class="search-container">
+          <form action="https://www.google.com/search" method="get" target="_blank"> <!-- the search bar links to google-->
+				  <input type="text" placeholder="Search.." name="q" id="q" required> <!-- makes the search input appear in google -->
+            <button type="submit"><i class="fa fa-search"></i></button> <!-- code for the search icon -->
+          </form>
+        </div>
+      </div>
+      <a href="javascript:void(0);" class="burgericon" onclick="shownav()"> <!-- burgericon that shows burger menu when clicked-->
+        <i class="fa fa-bars"></i>
+      </a>
+		</div>
+	</div>
+  <button onclick="topFunction()" id="topButton" title="Go to top">Top</button><!-- code for button that takes the page back to the top when clicked-->
+  <div id="bodycontent" class="content">
+    <p>This page will tell you what italian music terms and what music symbols you will need to know.</p>
+	  <h2>Italian Terms</h2>	
+    <table style="width:98%" class="teach"><!-- a table that contains italian terms for ABRSM grade 1 that are needed for the exam-->
+      <tr>
+        <th>Term</th>
+        <th>Definition</th>
+      </tr>
+      <tr>
+        <td>a tempo</td>
+        <td>in time</td>
+      </tr>
+      <tr>
+        <td>accelerando (or accel.)</td>
+        <td>gradually getting faster</td>
+      </tr>
+      <tr>
+        <td>adagio</td>
+        <td>slowly</td>
+      </tr>
+      <tr>
+        <td>allegretto</td>
+        <td>fairly quicker</td>
+      </tr>
+      <tr>
+        <td>allegro</td>
+        <td>quick</td>
+      </tr>
+      <tr>
+        <td>andante</td>
+        <td>at a walking pace</td>
+      </tr>
+      <tr>
+        <td>cantabile</td>
+        <td>in a singing style</td>
+      </tr>
+      <tr>
+        <td>crescendo (or cresc.)</td>
+        <td>gradually getting louder</td>
+      </tr>
+      <tr>
+        <td>da capo (or D.C.)</td>
+        <td>from the beginning</td>
+      </tr>
+      <tr>
+        <td>decrescendo (or decresc.)</td>
+        <td>gradually getting quieter</td>
+      </tr>
+      <tr>
+        <td>diminuendo (dim.)</td>
+        <td>gradually getting quieter</td>
+      </tr>
+      <tr>
+        <td>dolce</td>
+        <td>sweet</td>
+      </tr>
+      <tr>
+        <td>fine, al fine</td>
+        <td>end</td>
+      </tr>
+      <tr>
+        <td><i>f</i> (forte)</td>
+        <td>loud</td>
+      </tr>
+      <tr>
+        <td><i>ff</i> (fortissimo)</td>
+        <td>very loud</td>
+      </tr>
+      <tr>
+        <td>legato</td>
+        <td>smoothly</td>
+      </tr>
+      <tr>
+        <td><i>mf</i> (mezzo forte)</td>
+        <td>moderately loud</td>
+      </tr>
+      <tr>
+        <td><i>mp</i> (mezzo piano)</td>
+        <td>moderately soft</td>
+      </tr>
+      <tr>
+        <td>moderato</td>
+        <td>at a moderate speed</td>
+      </tr>
+      <tr>
+        <td><i>p</i> (piano)</td>
+        <td>quiet</td>
+      </tr>
+      <tr>
+        <td><i>pp</i> (pianissimo)</td>
+        <td>very quiet</td>
+      </tr>
+      <tr>
+        <td>rallentando (or rall.)</td>
+        <td>gradually getting slower</td>
+      </tr>
+      <tr>
+        <td>ritardando (or ritard. or rit.)</td>
+        <td>gradually getting slower</td>
+      </tr>
+      <tr>
+        <td>staccato (or stacc.)</td>
+        <td>short and detached</td>
+      </tr>       
+    </table>
+
+    <h2>Music Signs</h2>	
+      <table style="width:98%"> <!--a table that contains the symbols that are needed for grade 1 ABRSM-->
+        <tr>
+          <th>Sign</th>
+          <th>Meaning</th>
+        </tr>
+        <tr>
+          <td><img src="cresc.png" alt="a picture of a crescendo sign" height="40px"></td>
+          <td>crescendo (gradually getting louder)</td>
+        </tr>
+        <tr>
+          <td><img src="dim.png" alt="a picture of a diminuendo sign" height="40px"></td>
+          <td>decrescendo or diminuendo (gradually getting quieter)</td>
+        </tr>
+        <tr>
+          <td><img src="slur.png" alt="a picture of two music notes joined by a slur" height="40px"></td>
+          <td>slur</td>
+        </tr>
+        <tr>
+          <td><img src="tie.png" alt="a picture of to music notes joined by a tie" height="40px"></td>
+          <td>tie</td>
+        </tr>
+        <tr>
+          <td><img src="staccato.png" alt="a picture of a music note with a staccato sign on it" height="40px"></td>
+          <td>staccato</td>
+        </tr>
+        <tr>
+          <td><img src="accent.png" alt="a picture of an accented music note" height="40px"></td>
+          <td>accent</td>
+        </tr>
+        <tr>
+          <td><img src="fermata.png" alt="a picture of a music note with a fermata on top" height="40px"></td>
+          <td>fermata</td>
+        </tr>
+        <tr>
+          <td><img src="tempo.png" alt="a picture showing crotchet equals 60" height="40px"></td>
+          <td>play at tempo 60 crotchet beats per minute</td>
+        <tr>
+          <td><img src="repeat.png" alt="a picture of the music repeat sign" height="40px"></td>
+          <td>repeat sign</td>
+        </tr>
+        <tr>
+          <td><img src="common_time.png" alt="a picture of the 'C' for common time (four crotchets a bar)" height="40px"></td>
+          <td>common time (4 crotchets a bar)</td>
+        </tr>     
+      </table>
+
+    <br><p>Note: tables only provide SOME of the knowledge that is needed for the exam. External learning may be required for the exam</p><br>
+	</div>
+
+	<footer><!--a footer that has social media sites-->
+    <div id="buttons">
+      <a href="https://www.facebook.com/abrsmmusic" target="_blank" class="fa fa-facebook"></a> <!--links to the ABRSM facebook page-->
+      <a href="https://www.linkedin.com/school/abrsm/" target="_blank" class="fa fa-linkedin"></a><!--links to the ABRSM linkedin page-->
+      <a href="https://twitter.com/abrsm" target="_blank" class="fa fa-twitter"></a><!--links to the ABRSM twitter page-->
+      <a href="https://www.google.com/search?q=abrsm&rlz=1C1CHBD_enNZ696NZ696&oq=abrsm&aqs=chrome..69i57j46i131i199i433i465i512j69i59l2j69i60j69i65j69i60l2.1085j0j4&sourceid=chrome&ie=UTF-8" target="_blank" class="fa fa-google"></a><!--links to the google search page for ABRSM-->
+    </div>
+    <p>Music Theory &copy; 2021</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

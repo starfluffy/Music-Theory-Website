@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="style.css">	<!--linking to the css style sheet-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- code that is related to detecting to the size of the website-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- code that allows the website to use specific icon images-->
+  <link rel="icon" href="logo.png" type="image/gif" sizes="16x16"><!-- code for the tab bar icon-->
+</head>
+
+<body>
+	<div id="container"><!-- code for everything at the top of the site that appears on every page-->
+		<div id="banner">
+      <a id="logo" href = "index.html"><img src="header.png" alt="a picture of the logo and header"></a> <!-- code for logo and header text. both are in one image-->
+		</div>
+		<div id = "navbar"> <!-- navigation bar -->
+			<a class="active" href="index.html">HOME</a> <!-- has the class "active" becuase the user is on that page -->
+			<a class="nav" href="learn.html">LEARN</a>
+			<a class="nav" href="quiz.html">QUIZ</a>
+			<a class="nav" href="revise.html">REVISE</a>
+			<a class="nav" href="signup.html">SIGN UP</a>
+			<div class="search-container"> <!-- code for the search bar-->
+				<form action="https://www.google.com/search" method="get" target="_blank"> <!-- the search bar links to google-->
+				  <input type="text" placeholder="Search.." name="q" id="q" required> <!-- makes the search input appear in google -->
+				  <button type="submit"><i class="fa fa-search"></i></button> <!-- code for the search icon -->
+				</form>
+			</div>
+		</div>
+    <div id="burger" class="burgerhidden"> <!-- burger navigation bar-->
+      <a class="active" href="index.html">HOME</a> <!-- has the class "active" becuase the user is on that page -->
+      <div id="burgernav" class="burgerhidden">
+        <a class="nav" href="learn.html">LEARN</a>
+        <a class="nav" href="quiz.html">QUIZ</a>
+        <a class="nav" href="revise.html">REVISE</a>
+        <a class="nav" href="signup.html">SIGN UP</a>
+        <div class="search-container">
+          <form action="https://www.google.com/search" method="get" target="_blank"> <!-- the search bar links to google-->
+				  <input type="text" placeholder="Search.." name="q" id="q" required> <!-- makes the search input appear in google -->
+            <button type="submit"><i class="fa fa-search"></i></button> <!-- code for the search icon -->
+          </form>
+        </div>
+      </div>
+      <a href="javascript:void(0);" class="burgericon" onclick="shownav()"> <!-- burgericon that shows burger menu when clicked-->
+        <i class="fa fa-bars"></i>
+      </a>
+		</div>
+	</div>
+  <br>
+  <br>
+  <div id="image-gallery"> <!-- an image gallery that rotates three images-->
+    <div class="mySlides fade">
+      <img src="image1.jpg" alt="a black and white close up image of a person's hand filling out a theory exam paper" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="image5.png" alt="a picture showing part of an old hand written music score" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="image6.png" alt="a stylistic image of a piano keyboard and music staff" style="width:100%">
+    </div>
+  </div>
+  <br>
+  <div id="dots" style="text-align:center"> <!---->
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+  <button onclick="topFunction()" id="topButton" title="Go to top">Top</button> <!-- code for button that takes the page back to the top when clicked--> 
+  <div id="bodycontent" class="content"> <!-- code for writing that talks about ABRSM and introduces the website to users-->
+		<h2>About Music Theory and ABRSM</h2>
+    <p>Welcome!<br>This is a website that helps you learn, revise and test some of the basic things you will need to know for the ABRSM grade 1 theory exam.<br><br>The website includes a list of grade 1 italian terms and musical symbols; a quiz that tests you on your knowledgy using the type of questions that could show up on the exam; and a sign up form for a study group.</P><img id="abrsm_logo" src="abrsm_logo.png" alt="a picture of the ABRSM logo" style="height:200px" align="right">
+    <p>ABRSM is the UK's largest music education body, one of its largest music publishers and the world's leading provider of music exams, holding over 650,000 assessments in more than 90 countries every year. As a registered charity, they also make significant donations towards music education initiatives around the world.<br>
+    <br>Founded in 1889, they have a long and storied history. But their mission has stayed the same: to nurture a love for music, and to inspire achievement in it. At ABRSM, they believe that everyone, wherever they're from, should have access to high-quality music-learning.<br>
+    <br>In partnership with four Royal Schools of Music, they support music-making and learning across the globe. They offer pathways and resources for learners and teachers that help build musical skills and encourage progress.<br>
+    <br>Their core activity is providing graded music exams, assessments and diplomas. An ABRSM grade has a worldwide currency and their exams are designed to motivate learners at all levels and ages, providing realistic goals and tangible rewards for their achievements.<br>
+    <br>They support teachers and learners with a range of award-winning digital resources and publications, as well as host events and offer professional qualifications.<br>
+    <br>As a charity, they invest more than £6 million in music education every year, all across the globe. They also work with organisations around the world, providing donations, scholarships and sponsorship.<br>
+    <br>Their partnership work is never one-off - they build long-lasting relationships and support ongoing projects. They advocate for music, playing their part to ensure the future of music education and its place in society. Working towards this goal for over a century means that they're a trusted voice at a boardroom table as well as on a concert stage.<br>
+    <br>Led by their Strategic Leadership Team and Governing Body, their staff members, examiners and volunteers work with passion and dedication to make learning music what it should always be: a joyous and life-enriching experience.<br>
+    <br>To find out more, visit <a href="https://nz.abrsm.org/en/" target="_blank">https://nz.abrsm.org/en/</a></p>
+	</div>
+	<footer> <!-- footer that has icons of social media sites-->
+    <div id="buttons">
+      <a href="https://www.facebook.com/abrsmmusic" target="_blank" class="fa fa-facebook"></a> <!--links to the ABRSM facebook page-->
+      <a href="https://www.linkedin.com/school/abrsm/" target="_blank" class="fa fa-linkedin"></a><!--links to the ABRSM linkedin page-->
+      <a href="https://twitter.com/abrsm" target="_blank" class="fa fa-twitter"></a><!--links to the ABRSM twitter page-->
+      <a href="https://www.google.com/search?q=abrsm&rlz=1C1CHBD_enNZ696NZ696&oq=abrsm&aqs=chrome..69i57j46i131i199i433i465i512j69i59l2j69i60j69i65j69i60l2.1085j0j4&sourceid=chrome&ie=UTF-8" target="_blank" class="fa fa-google"></a><!--links to the google search page for ABRSM-->
+    </div>
+    <p>Music Theory &copy; 2021</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

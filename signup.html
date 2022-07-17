@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="style.css">	<!--linking to the css style sheet-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
+</head>
+
+<body>
+	<div id="container"><!-- code for everything at the top of the site that appears on every page-->
+		<div id="banner">
+      <a id="logo" href = "index.html"><img src="header.png" alt="a picture of the logo and header"></a> <!-- code for logo and header text. both are in one image-->
+		</div>
+		<div id = "navbar"> <!-- navigation bar -->
+			<a class="nav" href="index.html">HOME</a>
+			<a class="nav" href="learn.html">LEARN</a>
+			<a class="nav" href="quiz.html">QUIZ</a>
+			<a class="nav" href="revise.html">REVISE</a>
+			<a class="active" href="signup.html">SIGN UP</a> <!-- has the class "active" becuase the user is on that page -->
+			<div class="search-container"> <!-- code for the search bar-->
+				<form action="https://www.google.com/search" method="get" target="_blank"> <!-- the search bar links to google-->
+				  <input type="text" placeholder="Search.." name="q" id="q" required> <!-- makes the search input appear in google -->
+				  <button type="submit"><i class="fa fa-search"></i></button> <!-- code for the search icon -->
+				</form>
+			</div>
+		</div>
+    <div id="burger" class="burgerhidden"> <!-- burger navigation bar-->
+      <a class="active" href="signup.html">SIGN UP</a> <!-- has the class "active" becuase the user is on that page -->
+      <div id="burgernav" class="burgerhidden">
+        <a class="nav" href="index.html">HOME</a>
+        <a class="nav" href="learn.html">LEARN</a>
+        <a class="nav" href="quiz.html">QUIZ</a>
+        <a class="nav" href="revise.html">REVISE</a>
+        <div class="search-container">
+          <form action="https://www.google.com/search" method="get" target="_blank"> <!-- the search bar links to google-->
+				  <input type="text" placeholder="Search.." name="q" id="q" required> <!-- makes the search input appear in google -->
+            <button type="submit"><i class="fa fa-search"></i></button> <!-- code for the search icon -->
+          </form>
+        </div>
+      </div>
+      <a href="javascript:void(0);" class="burgericon" onclick="shownav()"> <!-- burgericon that shows burger menu when clicked-->
+        <i class="fa fa-bars"></i>
+      </a>
+		</div>
+	</div>
+  <button onclick="topFunction()" id="topButton" title="Go to top">Top</button><!-- button that takes the user back to the page when clicked-->
+  
+  <div id="bodycontent" class="content">
+    <h2>Sign Up Form for Study Group</h2>
+		<form method="get" action="submit.html" id="signup" name = "signup"><!-- a form for signing up to a study group-->
+      <label for="name">Enter you full name:</label><br>
+      <input type="text" id="name" name="name" placeholder="e.g. John Doe" required><br><br><!-- validated so that this has to be filled for the form to be submitted-->
+      <label for="email">Enter your email:</label><br>
+      <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br><!-- validated so that this has to be filled for the form to be submitted-->
+
+      <label for="grade">What grade will you be studying?</label><br><!-- radio buttons-->
+      <input type="radio" id="1" name="grade" value="1">
+      <label for="1">1</label><br>
+      <input type="radio" id="2" name="grade" value="2">
+      <label for="2">2</label><br>
+      <input type="radio" id="3" name="grade" value="3">
+      <label for="3">3</label><br>
+      <input type="radio" id="4" name="grade" value="4">
+      <label for="4">4</label><br>
+      <input type="radio" id="5" name="grade" value="5">
+      <label for="5">5</label><br><br>
+
+      <label for="day">Which days are you available?</label><br><!-- checkboxes-->
+      <input type="checkbox" id="monday" name="day" value="monday">
+      <label for="monday">Monday</label><br>
+      <input type="checkbox" id="tuesday" name="day" value="tuesday">
+      <label for="tuesday">Tuesday</label><br>
+      <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">
+      <label for="wednesday">Wednesday</label><br>
+      <input type="checkbox" id="thursday" name="thursday" value="thursday">
+      <label for="thursday">Thursday</label><br>
+      <input type="checkbox" id="friday" name="friday" value="friday">
+      <label for="friday">Friday</label><br>
+      <input type="checkbox" id="saturday" name="saturday" value="saturday">
+      <label for="saturday">Saturday</label><br>
+      <input type="checkbox" id="sunday" name="sunday" value="sunday">
+      <label for="sunday">Sunday</label><br><br>
+
+      <input type="submit" value="Submit" >
+      <input type="reset">
+    </form> 
+    <br>
+	</div>
+	<footer> <!-- footer that has links to social media sites-->
+    <div id="buttons">
+      <a href="https://www.facebook.com/abrsmmusic" target="_blank" class="fa fa-facebook"></a> <!--links to the ABRSM facebook page-->
+      <a href="https://www.linkedin.com/school/abrsm/" target="_blank" class="fa fa-linkedin"></a><!--links to the ABRSM linkedin page-->
+      <a href="https://twitter.com/abrsm" target="_blank" class="fa fa-twitter"></a><!--links to the ABRSM twitter page-->
+      <a href="https://www.google.com/search?q=abrsm&rlz=1C1CHBD_enNZ696NZ696&oq=abrsm&aqs=chrome..69i57j46i131i199i433i465i512j69i59l2j69i60j69i65j69i60l2.1085j0j4&sourceid=chrome&ie=UTF-8" target="_blank" class="fa fa-google"></a><!--links to the google search page for ABRSM-->
+    </div>
+    <p>Music Theory &copy; 2021</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

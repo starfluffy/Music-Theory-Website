@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Revise</title>
+	<link rel="stylesheet" type="text/css" href="style.css">	<!--linking to the css style sheet-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- code that is related to detecting to the size of the website-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- code that allows the website to use specific icon images-->
+  <link rel="icon" href="logo.png" type="image/gif" sizes="16x16"><!-- code for the tab bar icon-->
+</head>
+
+<body>
+	<div id="container"><!-- code for everything at the top of the site that appears on every page-->
+		<div id="banner">
+      <a id="logo" href = "index.html"><img src="header.png" alt="a picture of the logo and header"></a> <!-- code for logo and header text. both are in one image-->
+		</div>
+		<div id = "navbar"> <!-- navigation bar -->
+			<a class="nav" href="index.html">HOME</a>
+			<a class="nav" href="learn.html">LEARN</a>
+			<a class="nav" href="quiz.html">QUIZ</a>
+			<a class="active" href="revise.html">REVISE</a> <!-- has the class "active" becuase the user is on that page -->
+			<a class="nav" href="signup.html">SIGN UP</a>
+			<div class="search-container"> <!-- code for the search bar-->
+				<form action="https://www.google.com/search" method="get" target="_blank"> <!-- the search bar links to google-->
+				  <input type="text" placeholder="Search.." name="q" id="q" required> <!-- makes the search input appear in google -->
+				  <button type="submit"><i class="fa fa-search"></i></button> <!-- code for the search icon -->
+				</form>
+			</div>
+		</div>
+    <div id="burger" class="burgerhidden"> <!-- burger navigation bar-->
+      <a class="active" href="active.html">REVISE</a> <!-- has the class "active" becuase the user is on that page -->
+      <div id="burgernav" class="burgerhidden">
+        <a class="nav" href="index.html">HOME</a>
+        <a class="nav" href="learn.html">LEARN</a>
+        <a class="nav" href="quiz.html">QUIZ</a>
+        <a class="nav" href="signup.html">SIGN UP</a>
+        <div class="search-container">
+          <form action="https://www.google.com/search" method="get" target="_blank"> <!-- the search bar links to google-->
+				  <input type="text" placeholder="Search.." name="q" id="q" required> <!-- makes the search input appear in google -->
+            <button type="submit"><i class="fa fa-search"></i></button> <!-- code for the search icon -->
+          </form>
+        </div>
+      </div>
+      <a href="javascript:void(0);" class="burgericon" onclick="shownav()"> <!-- burgericon that shows burger menu when clicked-->
+        <i class="fa fa-bars"></i>
+      </a>
+		</div>
+	</div>
+  <button onclick="topFunction()" id="topButton" title="Go to top">Top</button><!-- button that takes the user back to the top of the page when clicked-->
+  <div id="bodycontent" class="content"><br>
+    <p>You may find the following useful for your revision:</p>
+    <div id="resources"><!-- links to things that are helpful for the exam-->
+      <a id="abrsm_link" href = "https://nz.abrsm.org/en/" target="_blank"><img src="abrsm_home.png" alt="home" style="height:205px"></a>
+      <a href="https://nz.abrsm.org/en/our-exams/online-theory/exam-information/" target="blank"><img src="exam_info.png" alt="home" style="height:205px"></a>
+      <a href="https://nz.abrsm.org/en/our-exams/online-theory/exam-preparation-resources/" target="blank"><img src="exam_prep.png" alt="home" style="height:205px"></a>
+      <a href="https://nz.abrsm.org/en/exam-support/apps-and-practice-tools/" target="blank"><img src="apps_and_tools.png" alt="home" style="height:205px"></a>
+      <a href="https://shop.abrsm.org/shop/dept/Music-Theory/100016" target="blank"><img src="abrsm_store.png" alt="home" style="height:205px"></a>
+      <a href="https://gb.abrsm.org/en/theory2018/free-practice-materials/" target="blank"><img src="free_materials.png" alt="home" style="height:205px"></a>
+    </div>
+    <div id="resources"><!-- links to places where you can buy revision materials (books)-->
+      <a class="book" href="https://shop.abrsm.org/shop/prod/ABRSM-Discovering-Music-Theory-The-ABRSM-Grade-1-Workbook/2437296" target="blank"><img src="resource1.png" alt="book"></a>
+      <a class="book" href="https://shop.abrsm.org/shop/prod/ABRSM-Discovering-Music-Theory-The-ABRSM-Grade-1-Answer-Book/2437301" target="blank"><img src="resource2.png" alt="book"></a>
+      <a class="book" href="https://shop.abrsm.org/shop/prod/ABRSM-Music-Theory-in-Practice-Model-Answers-Grade-1/2049684" target="blank"><img src="resource3.png" alt="book"></a>
+      <a class="book" href="https://shop.abrsm.org/shop/prod/Taylor-Eric-First-Steps-in-Music-Theory/610730" target="blank"><img src="resource4.png" alt="book"></a>
+      <a class="book" href="https://shop.abrsm.org/shop/prod/Taylor-Eric-Music-Theory-in-Practice-Grade-1/599624" target="blank"><img src="resource5.png" alt="book"></a>
+      <a class="book" href="https://shop.abrsm.org/shop/prod/Taylor-Eric-The-AB-Guide-to-Music-Theory-Part-I/598230" target="blank"><img src="resource6.png" alt="book"></a>
+    </div>
+    <p>It is also possible to purchase the books shown above at places other than the ABRSM site such as the Rockshop and Piano Traders.</p>
+    <br>
+	</div>
+	<footer>
+    <div id="buttons"><!-- footer that has links to social media sites-->
+      <a href="https://www.facebook.com/abrsmmusic" target="_blank" class="fa fa-facebook"></a> <!--links to the ABRSM facebook page-->
+      <a href="https://www.linkedin.com/school/abrsm/" target="_blank" class="fa fa-linkedin"></a><!--links to the ABRSM linkedin page-->
+      <a href="https://twitter.com/abrsm" target="_blank" class="fa fa-twitter"></a><!--links to the ABRSM twitter page-->
+      <a href="https://www.google.com/search?q=abrsm&rlz=1C1CHBD_enNZ696NZ696&oq=abrsm&aqs=chrome..69i57j46i131i199i433i465i512j69i59l2j69i60j69i65j69i60l2.1085j0j4&sourceid=chrome&ie=UTF-8" target="_blank" class="fa fa-google"></a><!--links to the google search page for ABRSM-->
+    </div>
+    <p>Music Theory &copy; 2021</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

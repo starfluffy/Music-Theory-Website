@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Quiz</title>
+	<link rel="stylesheet" type="text/css" href="style.css">	<!--linking to the css style sheet-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- code that is related to detecting to the size of the website-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- code that allows the website to use specific icon images-->
+  <link rel="icon" href="logo.png" type="image/gif" sizes="16x16"><!-- code for the tab bar icon-->
+</head>
+
+<body>
+	<div id="container"><!-- code for everything at the top of the site that appears on every page-->
+		<div id="banner">
+      <a id="logo" href = "index.html"><img src="header.png" alt="a picture of the logo and header"></a> <!-- code for logo and header text. both are in one image-->
+		</div>
+		<div id = "navbar"> <!-- navigation bar -->
+			<a class="nav" href="index.html">HOME</a>
+			<a class="nav" href="learn.html">LEARN</a>
+			<a class="active" href="quiz.html">QUIZ</a> <!-- has the class "active" becuase the user is on that page -->
+			<a class="nav" href="revise.html">REVISE</a>
+			<a class="nav" href="signup.html">SIGN UP</a>
+			<div class="search-container"> <!-- code for the search bar-->
+				<form action="https://www.google.com/search" method="get" target="_blank"> <!-- the search bar links to google-->
+				  <input type="text" placeholder="Search.." name="q" id="q" required> <!-- makes the search input appear in google -->
+				  <button type="submit"><i class="fa fa-search"></i></button> <!-- code for the search icon -->
+				</form>
+			</div>
+		</div>
+    <div id="burger" class="burgerhidden"> <!-- burger navigation bar-->
+      <a class="active" href="quiz.html">QUIZ</a> <!-- has the class "active" becuase the user is on that page -->
+      <div id="burgernav" class="burgerhidden">
+        <a class="nav" href="index.html">HOME</a>
+        <a class="nav" href="learn.html">LEARN</a>
+        <a class="nav" href="revise.html">REVISE</a>
+        <a class="nav" href="signup.html">SIGN UP</a>
+        <div class="search-container">
+          <form action="https://www.google.com/search" method="get" target="_blank"> <!-- the search bar links to google-->
+				  <input type="text" placeholder="Search.." name="q" id="q" required> <!-- makes the search input appear in google -->
+            <button type="submit"><i class="fa fa-search"></i></button> <!-- code for the search icon -->
+          </form>
+        </div>
+      </div>
+      <a href="javascript:void(0);" class="burgericon" onclick="shownav()"> <!-- burgericon that shows burger menu when clicked-->
+        <i class="fa fa-bars"></i>
+      </a>
+		</div>
+	</div>
+  
+  <button onclick="topFunction()" id="topButton" title="Go to top">Top</button><!-- code for button that takes the page back to the top when clicked-->
+  <div id="bodycontent" class="content"><!-- a quiz that tests the users on grade 1 ABRSM italian terms-->
+    <h2>Vocabulary Quiz</h2>
+    <div>
+      <form id = "quiz" name = "quiz1"><!--quiz base is a HTML form-->
+        <div id="q1">
+          <p class="vocab_questions">f (forte) means:</p>
+          <input type = "radio" id = "radio-button" name = "question1" value = "a">a. very loud<br>
+          <input type = "radio" id = "radio-button" name = "question1" value = "b">b. loud<br>
+          <input type = "radio" id = "radio-button" name = "question1" value = "c">c. moderately loud<br>
+          <input type = "radio" id = "radio-button" name = "question1" value = "d">d. moderately quiet<br><br>
+        </div>
+        <div id="q2">
+          <p class="vocab_questions">allegro means:</p>
+          <input type = "radio" id = "radio-button" name = "question2" value = "a">a. moderately fast<br>
+          <input type = "radio" id = "radio-button" name = "question2" value = "b">b. walking speed<br>
+          <input type = "radio" id = "radio-button" name = "question2" value = "c">c. fast<br>
+          <input type = "radio" id = "radio-button" name = "question2" value = "d">d. very fast<br><br>
+        </div>
+        <div id="q3">
+          <p class="vocab_questions">rit. (ritardando) means:</p>
+          <input type = "radio" id = "radio-button" name = "question3" value = "a">a. held back<br>
+          <input type = "radio" id = "radio-button" name = "question3" value = "b">b. suddenly get slower<br>
+          <input type = "radio" id = "radio-button" name = "question3" value = "c">c. slowly<br>
+          <input type = "radio" id = "radio-button" name = "question3" value = "d">d. gradually get slower<br><br>
+        </div>
+        <div id="q4">
+          <p class="vocab_questions">legato means:</p>
+          <input type = "radio" id = "radio-button" name = "question4" value = "a">a.  smoothly<br>
+          <input type = "radio" id = "radio-button" name = "question4" value = "b">b.  detached<br>
+          <input type = "radio" id = "radio-button" name = "question4" value = "c">c.  short<br>
+          <input type = "radio" id = "radio-button" name = "question4" value = "d">d.  slightly detached<br><br>
+        </div>
+        <div id="q5">
+          <p class="vocab_questions">dolce means:</p>
+          <input type = "radio" id = "radio-button" name = "question5" value = "a">a.  in a singing style<br>
+          <input type = "radio" id = "radio-button" name = "question5" value = "b">b.  quiet<br>
+          <input type = "radio" id = "radio-button" name = "question5" value = "c">c.  slowly<br>
+          <input type = "radio" id = "radio-button" name = "question5" value = "d">d.  sweet<br><br>
+        </div>
+        <input id = "submitbutton1" class = "submitbutton" type = "button" value = "Check answers" onclick = "check1();"><!-- submits the quiz and activates a javascript function that checks the answers and displays a message-->
+        <input id = "resetbutton1" class = "resetbutton" type="reset" value = "Reset"><!-- button that resets the users answers-->
+      </form>
+
+      <div id = "after_submit1" class="burgerhidden"><!-- message that shows after the users submits the quiz-->
+        <p id = "number_correct1"></p>
+        <p id = "message1"></p>
+        <input id = "tryagainbutton" type="reset" value = "Try again" onclick = "resetq1();"><!-- button that allows the user to try the quiz again-->
+      </div>
+    </div>
+
+    <h2>Music Signs and Symbols Quiz</h2>
+    <div>
+      <form id = "quiz" name = "quiz2"><!-- a quiz that tests the user on ABRSM grade 1 musical symbols. quiz base is a HTML form-->
+        <div id="q6">
+          <p class="vocab_questions">What note is this?</p>
+          <img src="question6.PNG" alt="a picture of a music note on a music staff">
+          <br>
+          <input type = "radio" id = "radio-button" name = "question6" value = "a">a. E<br>
+          <input type = "radio" id = "radio-button" name = "question6" value = "b">b. G<br>
+          <input type = "radio" id = "radio-button" name = "question6" value = "c">c. F<br>
+          <input type = "radio" id = "radio-button" name = "question6" value = "d">d. C<br><br>
+        </div>
+        <div id="q7">
+          <p class="vocab_questions">What is the symbol above the note?</p>
+          <img src="question7.PNG" alt="a picture of a music note on a music staff">
+          <br>
+          <input type = "radio" id = "radio-button" name = "question7" value = "a">a. fermata<br>
+          <input type = "radio" id = "radio-button" name = "question7" value = "b">b. accent<br>
+          <input type = "radio" id = "radio-button" name = "question7" value = "c">c. legato<br>
+          <input type = "radio" id = "radio-button" name = "question7" value = "d">d. staccato<br><br>
+        </div>
+        <div id="q8">
+          <p class="vocab_questions">What melodic interval is this?</p>
+          <img src="question8.PNG" alt="a picture of a music note on a music staff">
+          <br>
+          <input type = "radio" id = "radio-button" name = "question8" value = "a">a. major 3rd<br>
+          <input type = "radio" id = "radio-button" name = "question8" value = "b">b. minor 7th<br>
+          <input type = "radio" id = "radio-button" name = "question8" value = "c">c. major 7th<br>
+          <input type = "radio" id = "radio-button" name = "question8" value = "d">d. perfect 5th<br><br>
+        </div>
+        <div id="q9">
+          <p class="vocab_questions">What is the time signature of this excerpt?</p>
+          <img src="question9.PNG" alt="a picture of a music note on a music staff">
+          <br>
+          <input type = "radio" id = "radio-button" name = "question9" value = "a">a.  3 crotchet beats per bar (3/4)<br>
+          <input type = "radio" id = "radio-button" name = "question9" value = "b">b.  2 crotchet beats per bar (2/4)<br>
+          <input type = "radio" id = "radio-button" name = "question9" value = "c">c.  4 crotchet beats per bar (4/4)<br>
+          <input type = "radio" id = "radio-button" name = "question9" value = "d">d.  3 quaver beats per bar (3/8)<br><br>
+        </div>
+        <div id="q10">
+          <p class="vocab_questions">Name the key of this tonic triad</p>
+          <img src="question10.PNG" alt="a picture of a music note on a music staff">
+          <br>
+          <input type = "radio" id = "radio-button" name = "question10" value = "a">a.  B minor<br>
+          <input type = "radio" id = "radio-button" name = "question10" value = "b">b.  F major<br>
+          <input type = "radio" id = "radio-button" name = "question10" value = "c">c.  D minor<br>
+          <input type = "radio" id = "radio-button" name = "question10" value = "d">d.  D major<br><br>
+        </div>
+        <input id = "submitbutton2" class = "submitbutton" type = "button" value = "Check answers" onclick = "check2();"><!-- submits the quiz and activates a javascript function that checks the answers and displays a message-->
+        <input id = "resetbutton2" class = "resetbutton" type="reset" value = "Reset"><!-- button that resets the users answers-->
+      </form>
+
+      <div id = "after_submit2" class="burgerhidden"><!-- message that shows after the users submits the quiz-->
+        <p id = "number_correct2"></p>
+        <p id = "message2"></p>
+        <input id = "tryagainbutton" type="reset" value = "Try again" onclick = "resetq2();"><!-- button that allows the user to try the quiz again-->
+      </div>
+    </div>
+    <p>Note: quiz is not suitable if student only has knowledge from this website</p>
+  </div>
+  <br> 
+  <footer> <!-- a footer that has links to social media sites-->
+    <div id="buttons">
+      <a href="https://www.facebook.com/abrsmmusic" target="_blank" class="fa fa-facebook"></a> <!--links to the ABRSM facebook page-->
+      <a href="https://www.linkedin.com/school/abrsm/" target="_blank" class="fa fa-linkedin"></a><!--links to the ABRSM linkedin page-->
+      <a href="https://twitter.com/abrsm" target="_blank" class="fa fa-twitter"></a><!--links to the ABRSM twitter page-->
+      <a href="https://www.google.com/search?q=abrsm&rlz=1C1CHBD_enNZ696NZ696&oq=abrsm&aqs=chrome..69i57j46i131i199i433i465i512j69i59l2j69i60j69i65j69i60l2.1085j0j4&sourceid=chrome&ie=UTF-8" target="_blank" class="fa fa-google"></a><!--links to the google search page for ABRSM-->
+    </div>
+    <p>Music Theory &copy; 2021</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
